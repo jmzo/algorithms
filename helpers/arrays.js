@@ -4,25 +4,25 @@ function generateIntegerArray (lowerLimit, upperLimit, arraySize) {
     ['upperLimit', 'number'],
     ['arraySize',  'number']
   ])
-  
+
   // Cast to integers.
   lowerLimit = parseInt(lowerLimit)
   upperLimit = parseInt(upperLimit)
   arraySize = parseInt(arraySize)
-  
+
   // Make sure neither have resolved to NaN.
   let absOfSum = Math.abs(lowerLimit + upperLimit + arraySize)
   if (absOfSum !== absOfSum) {
     console.error('arguments must each be a number.')
     return
   }
-  
+
   // Make sure lowerLimit is less than or equal to upperLimit.
   if (lowerLimit > upperLimit) {
     console.error('lowerLimit argument must be less than or equal to upperLimit.')
     return
   }
-  
+
   let array = []
   for (let i = 0; i < arraySize; i++) {
     let spanLength = upperLimit - lowerLimit
@@ -32,6 +32,9 @@ function generateIntegerArray (lowerLimit, upperLimit, arraySize) {
   return array
 }
 
+/*
+Inspired by React's Prop Validation
+*/
 function checkArguments () {
   let caller = arguments.caller || checkArguments.caller
   let msgs = []
