@@ -1,0 +1,13 @@
+{
+  "name": "algorithms",
+  "description": "A place for experimenting with different solutions to programming challenges using algorithms and data structures.",
+  "version": "1.0.0",
+  "author": "James Caratozzolo",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "dependencies": {
+    "backseat-driver": "^1.0.1"
+  }
+}
